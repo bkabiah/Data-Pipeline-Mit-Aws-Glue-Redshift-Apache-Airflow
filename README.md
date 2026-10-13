@@ -1,4 +1,4 @@
-# 🛒 E-Commerce Multi-Source Data Pipeline
+# E-Commerce Multi-Source Data Pipeline
 
 ## 📋 Einführung
 
@@ -47,6 +47,8 @@ flowchart TB
     style S3_ORDERS fill:#fff9e1
 
 ```
+
+
 ┌─────────────────
 
 │ start_pipeline  │
