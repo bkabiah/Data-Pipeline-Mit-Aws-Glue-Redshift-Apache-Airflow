@@ -1,0 +1,10 @@
+{"order_id": "ORD-1001", "customer_id": 1, "timestamp": "2023-10-27T10:15:00Z", "total_amount": 150.50, "status": "delivered", "source": "webshop"}
+{"order_id": "ORD-1002", "customer_id": 2, "timestamp": "2023-10-27T11:30:00Z", "total_amount": 89.99, "status": "shipped", "source": "app"}
+{"order_id": "ORD-1003", "customer_id": 3, "timestamp": "2023-10-27T12:45:00Z", "total_amount": 210.00, "status": "pending", "source": "instagram"}
+{"order_id": "ORD-1004", "customer_id": 1, "timestamp": "2023-10-27T14:00:00Z", "total_amount": 45.00, "status": "delivered", "source": "webshop"}
+{"order_id": "ORD-1005", "customer_id": 5, "timestamp": "2023-10-27T15:20:00Z", "total_amount": 320.75, "status": "shipped", "source": "webshop"}
+{"order_id": "ORD-1006", "customer_id": 6, "timestamp": "2023-10-27T16:10:00Z", "total_amount": 15.99, "status": "cancelled", "source": "app"}
+{"order_id": "ORD-1007", "customer_id": 7, "timestamp": "2023-10-27T17:30:00Z", "total_amount": 199.99, "status": "delivered", "source": "webshop"}
+{"order_id": "ORD-1008", "customer_id": 8, "timestamp": "2023-10-27T18:45:00Z", "total_amount": 75.00, "status": "pending", "source": "affiliate"}
+{"order_id": "ORD-1009", "customer_id": 9, "timestamp": "2023-10-27T19:00:00Z", "total_amount": 55.50, "status": "shipped", "source": "webshop"}
+{"order_id": "ORD-1010", "customer_id": 10, "timestamp": "2023-10-27T20:15:00Z", "total_amount": 120.00, "status": "delivered", "source": "app"}
