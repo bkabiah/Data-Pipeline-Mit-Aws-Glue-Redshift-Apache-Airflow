@@ -1,0 +1,69 @@
+# ============================================================================
+# E-Commerce Data Pipeline - Python Dependencies
+# ============================================================================
+# Diese Datei enthält die Python-Pakete für:
+# 1. Apache Airflow (Orchestrierung)
+# 2. AWS Integration (Lambda, Glue, S3, Redshift)
+# 3. Lokale Entwicklung & Testing
+#
+# Installation:
+#   pip install -r requirements.txt
+#
+# Hinweis: Airflow selbst läuft in Docker (siehe docker-compose.yml).
+# Diese requirements.txt ist für lokale Entwicklung, Testing und
+# die Airflow AWS-Provider, die im Docker-Image installiert werden.
+# ============================================================================
+
+# ----------------------------------------------------------------------------
+# Apache Airflow Core (nur für lokale Entwicklung/Testing)
+# In Produktion läuft Airflow über Docker (apache/airflow:2.7.3)
+# ----------------------------------------------------------------------------
+apache-airflow==2.7.3
+
+# ----------------------------------------------------------------------------
+# AWS Provider für Airflow
+# Ermöglicht Operatoren wie:
+# - LambdaInvokeFunctionOperator
+# - GlueJobOperator
+# - S3ToRedshiftOperator
+# ----------------------------------------------------------------------------
+apache-airflow-providers-amazon==8.13.0
+
+# ----------------------------------------------------------------------------
+# AWS SDK für Python (Boto3)
+# Wird verwendet für:
+# - Lokale Tests der Lambda-Funktion
+# - S3-Operationen (Upload/Download)
+# - AWS Resource Management
+# ----------------------------------------------------------------------------
+boto3==1.34.14
+botocore==1.34.14
+
+# ----------------------------------------------------------------------------
+# PostgreSQL Treiber
+# pg8000: Reiner Python-Treiber (verwendet in AWS Lambda)
+# psycopg2-binary: C-basierter Treiber (für lokale Entwicklung)
+# ----------------------------------------------------------------------------
+pg8000==1.30.3
+psycopg2-binary==2.9.9
+
+# ----------------------------------------------------------------------------
+# Data Processing & Transformation
+# ----------------------------------------------------------------------------
+pandas==2.1.4
+pyarrow==14.0.1
+
+# ----------------------------------------------------------------------------
+# Testing & Code Quality (Optional, aber empfohlen)
+# ----------------------------------------------------------------------------
+pytest==7.4.3
+pytest-cov==4.1.0
+black==23.12.1
+ruff==0.1.9
+mypy==1.8.0
+
+# ----------------------------------------------------------------------------
+# Utilities
+# ----------------------------------------------------------------------------
+python-dotenv==1.0.0
+requests==2.31.0
