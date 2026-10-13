@@ -74,42 +74,5 @@ Der DAG `ecommerce_data_pipeline` implementiert ein intelligentes Routing basier
 5. `run_glue_etl` (GlueJobOperator - Führt PySpark Join & Transformation aus)
 6. `validate_redshift_data` (PythonOperator - Data Quality Check)
 
-┌─────────────────
 
-│ start_pipeline  │
-└────────┬────────┘
-         │
-         ▼
-┌─────────────────────┐
-│ check_data_volume   │  ← PythonOperator: Prüft erwartetes Volumen
-└────────┬────────────┘
-         │
-         ▼
-┌─────────────────────┐
-│ branch_decision     │  ← BranchPythonOperator: Entscheidet Routing
-└────────┬────────────┘
-         │
-    ┌────┴────┐
-    │         │
-    ▼         ▼
-┌────────┐ ┌──────────────┐
-│ full   │ │ incremental  │  ← Lambda Trigger (Payload steuert Load-Typ)
-│ load   │ │ load         │
-└────┬───┘ └──────┬───────┘
-     │            │
-     └─────┬──────┘
-           │
-           ▼
-   ┌───────────────┐
-   │ join_branches │  ← DummyOperator (trigger_rule='none_failed')
-   └───────┬───────┘
-           │
-           ▼
-   ┌───────────────┐
-   │ run_glue_etl  │  ← GlueJobOperator (PySpark ETL)
-   └───────┬───────┘
-           │
-           ▼
-   ┌───────────────┐
-   │ validate_data │  ← PythonOperator (Data Quality Check)
-   └───────────────┘
+
