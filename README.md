@@ -45,6 +45,8 @@ flowchart TB
     style REDSHIFT fill:#f0e1ff
     style S3_CUSTOMERS fill:#fff9e1
     style S3_ORDERS fill:#fff9e1
+
+```
 ┌─────────────────┐Der Airflow DAG: Intelligentes Branching
 Der DAG ecommerce_data_pipeline implementiert ein dynamisches Routing basierend auf dem erwarteten Datenvolumen. Dies ist ein kritischer Kostenoptimierungs-Mechanismus in der Praxis:
 │ start_pipeline  │
